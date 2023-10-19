@@ -23,7 +23,7 @@ const Pricing: React.FC<PricingProps> = ({ plans }) => {
         {isAnnual ? 'Annual' : 'Monthly'}
       </button>
       {plans.map((plan, index) => (
-        <div key={index}>
+        <div key={index} className="card">
           <h2>{plan.name}</h2>
           <p>{isAnnual ? plan.price.annual : plan.price.monthly}</p>
           <ul>
@@ -31,7 +31,7 @@ const Pricing: React.FC<PricingProps> = ({ plans }) => {
               <li key={index}>{feature}</li>
             ))}
           </ul>
-          <button>Sign Up</button>
+          <button className="btn btn-primary">Sign Up</button>
         </div>
       ))}
     </div>
